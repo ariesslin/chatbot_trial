@@ -33,7 +33,7 @@ jobs:
         env:
           release_bucket: chatbot-trail-deploy
           release_bucket_uri: s3://chatbot-trail-deploy
-          release_id: ${{ format('chatbot-trail-{0}.zip', (github.sha).substring(0, 7)) }}
+          release_id: ${{ format('chatbot-trail-{0}.zip', (github.sha).substring(0, 7)) )}}
           release_layer: ${{ format('chatbot-trail-{0}', (github.sha).substring(0, 7)) )}}
         run: |
           mkdir dependencies
