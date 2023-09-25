@@ -33,8 +33,8 @@ jobs:
         env:
           release_bucket: chatbot-trail-deploy
           release_bucket_uri: s3://chatbot-trail-deploy
-          release_id: ${{ format('chatbot-trail-{0}.zip', github.head_ref )}}
-          release_layer: ${{ format('chatbot-trail-{0}', github.head_ref )}}
+          release_id: ${{ format('chatbot-trail-{0}.zip', github.ref )}}
+          release_layer: ${{ format('chatbot-trail-{0}', github.ref )}}
         run: |
           mkdir dependencies
           pip install -t dependencies -r requirements.txt
