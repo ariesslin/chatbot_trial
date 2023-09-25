@@ -42,4 +42,4 @@ jobs:
           zip --quiet -r $release_id dependencies
           zip $release_id -u main.py
           aws s3 cp $release_id $release_bucket_uri
-          aws lambda update-function-code --function-name chatgpt --s3-bucket release_bucket_uri --s3-key release_id
+          aws lambda update-function-code --function-name chatgpt --s3-bucket $release_bucket --s3-key $release_id
