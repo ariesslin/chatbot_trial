@@ -162,4 +162,3 @@ cython_debug/
 aws_lambda_artifact.zip
 dependencies/
 myenv/
-requirements.txt
